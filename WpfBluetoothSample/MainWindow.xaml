@@ -6,7 +6,22 @@
         xmlns:local="clr-namespace:WpfBluetoothSample"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+    <UniformGrid Rows="1">
+        <StackPanel>
+            <Label Content="Receiver"/>
+            <Button x:Name="ListenButton" Content="Listen" Click="ListenButton_Click"/>
+            <Button x:Name="DisconnectButton" Content="Disconnect" Click="DisconnectButton_Click"/>
+            <TextBox x:Name="MessageTextBox"/>
+            <Button x:Name="SendButton" Content="sendButton" Click="SendButton_Click"/>
+            <ListBox x:Name="ConversationListBox" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MaxHeight ="300" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
+        </StackPanel>
+        <StackPanel>
+            <Label Content="Sender"/>
+            <Button x:Name="senderListenButton" Content="Listen" Click="senderListenButton_Click"/>
+            <Button x:Name="senderDisconnectButton" Content="Disconnect" Click="senderDisconnectButton_Click"/>
+            <TextBox x:Name="senderMessageTextBox"/>
+            <Button x:Name="senderSendButton" Content="sendButton" Click="senderSendButton_Click"/>
+            <ListBox x:Name="senderConversationListBox" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MaxHeight ="300" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
+        </StackPanel>
+    </UniformGrid>
 </Window>
